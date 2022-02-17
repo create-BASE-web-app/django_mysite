@@ -127,3 +127,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+
+MEDIA_ROOT = BASE_DIR / 'media'
+
+MEDIA_URL = 'medi/'
+
+LOGIN_URL = 'login'
