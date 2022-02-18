@@ -13,6 +13,7 @@
 
   {% if post.snsimage %}
   <p><img src="{{ post.snsimage.url }}" width=500></p>
+
   {% endif %}
 
   <a href="{% url 'good' post.pk %}" class="btn btn-primary" role="button" aria-pressed="true">いいね {{ post.good }}</a>
