@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'mdeditor',  
 ]
 
 MIDDLEWARE = [
@@ -133,3 +134,10 @@ MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = 'medi/'
 
 LOGIN_URL = 'login'
+
+# これはDjangoバージョン3.0以上の場合のみ記載すること
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+# # ファイルアップロード用
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+# MEDIA_URL = '/media/'
