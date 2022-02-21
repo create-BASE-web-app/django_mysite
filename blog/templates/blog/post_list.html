@@ -6,6 +6,11 @@
   <div class="date">
     <p>published: {{ post.published_date }}</p>
   </div>
+
+  {% if post.snsimage %}
+  <p><img src="{{ post.snsimage.url }}" width=250></p>
+  {% endif %}
+  
   <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
   <p>{{ post.author }}</p>
   <a href="#" class="btn btn-primary disabled" role="button" aria-pressed="true">👍　{{ post.good }}</a>

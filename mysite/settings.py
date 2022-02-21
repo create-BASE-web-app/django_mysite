@@ -141,3 +141,14 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 # # ファイルアップロード用
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 # MEDIA_URL = '/media/'
+MDEDITOR_CONFIGS = {
+    'default': {
+        'language': 'en',
+        'toolbar': ["undo", "redo", "image", "|",
+                    "bold", "quote", "|",
+                    "h1", "h2", "h3", "h5", "h6", "|",
+                    "list-ul", "list-ol", "hr", "|",
+                    "||", "preview", "watch", "fullscreen"],
+        'lineWrapping': True
+    }
+}
