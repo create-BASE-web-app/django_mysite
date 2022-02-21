@@ -8,7 +8,7 @@
   </div>
 
   {% if post.snsimage %}
-  <p><img src="{{ post.snsimage.url }}" width=250></p>
+  <p href="{% url 'post_detail' pk=post.pk %}"><img src="{{ post.snsimage.url }}" width=250></p>
   {% endif %}
   
   <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
