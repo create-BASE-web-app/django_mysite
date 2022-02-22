@@ -1,3 +1,5 @@
+{% extends 'base.html' %}
+
 <div class="container col-lg-6 offset-lg-3">
 
     <!---記事タイトルを表示-->
@@ -11,7 +13,7 @@
         {% for field in form %}
         <div class="field">
             {{ field.label_tag }}
-            {% render_field field class="form-control" %}
+            {{ render_field field class="form-control" }}
 
             {{ field.errors }}
         </div>

@@ -32,7 +32,8 @@ class CommentView(CreateView):
 
 #フォームに入力された情報が正しい場合の処理
     def form_valid(self, form):
-        post_pk = self.kwargs['pk']
+        post_pk = self.kwargs['post.pk']
+        pk = self.kwargs['comment.pk']
         post = get_object_or_404(Post, pk=post_pk)
         comment = form.save(commit=False)
         comment.target = post
