@@ -25,3 +25,12 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    
+class Comment(models.Model):
+    user_name = models.CharField('名前', max_length=255, default='名無し')
+    message = models.TextField('本文')
+    target = models.ForeignKey(Post, on_delete=models.CASCADE, verbose_name='対象記事')
+    created_at = models.DateTimeField('作成日', default=timezone.now)
+
+    def __str__(self):
+        return self.message[:20]
